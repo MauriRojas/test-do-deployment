@@ -1,0 +1,31 @@
+spec:
+  name: test-mr-do-starter-kit
+  region: nyc
+  services:
+    - name: web-service
+      environment_slug: node-js
+      git:
+        branch: main
+        repo_clone_url: https://github.com/MauriRojas/test-do-deployment
+      build_command: "npm install && npm run build"
+      run_command: "npm run start:prod"
+      http_port: 3000
+      instance_count: 1
+      instance_size_slug: apps-s-1vcpu-0.5gb
+      routes:
+        - path: /
+      source_dir: ./backend
+  static_sites:
+    - name: static-site
+      environment_slug: node-js
+      git:
+        branch: main
+        repo_clone_url: https://github.com/MauriRojas/test-do-deployment
+      build_command: "npm install && npm run build"
+      run_command: "npm run start"
+      http_port: 3000
+      instance_count: 1
+      instance_size_slug: apps-s-1vcpu-0.5gb
+      routes:
+        - path: /
+      source_dir: ./frontend
