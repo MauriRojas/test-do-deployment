@@ -1,0 +1,16 @@
+name: my-app-mr-test
+region: nyc
+services:
+  - name: web-service
+    github:
+      repo: MauriRojas/test-do-deployment
+      branch: main
+      deploy_on_push: true
+    source_dir: ./backend
+static_sites:
+  - name: static-site
+    github:
+      repo: MauriRojas/test-do-deployment
+      branch: main
+      deploy_on_push: true
+    source_dir: ./frontend
