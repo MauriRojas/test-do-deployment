@@ -13,6 +13,8 @@ spec:
       instance_count: 1
       instance_size_slug: apps-s-1vcpu-0.5gb
       source_dir: ./backend
+      ingress:
+        routes: /api
   static_sites:
     - name: static-site
       environment_slug: node-js
