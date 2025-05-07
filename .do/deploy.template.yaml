@@ -2,17 +2,17 @@ spec:
   name: test-mr-do-starter-kit
   region: nyc
   ingress:
-  rules:
-  - component:
-      name: web-service
-    match:
-      path:
-        prefix: /api
-  - component:
-      name: static-site
-    match:
-      path:
-        prefix: /
+    rules:
+    - component:
+        name: web-service
+      match:
+        path:
+          prefix: /api
+    - component:
+        name: static-site
+      match:
+        path:
+          prefix: /
   services:
     - name: web-service
       environment_slug: node-js
