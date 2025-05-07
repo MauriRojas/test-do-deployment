@@ -22,7 +22,6 @@ spec:
         branch: main
         repo_clone_url: https://github.com/MauriRojas/test-do-deployment
       build_command: "npm install && npm run build"
-      run_command: "npm run start"
       routes:
         - path: /
       source_dir: ./frontend
