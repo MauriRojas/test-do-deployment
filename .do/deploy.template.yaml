@@ -34,7 +34,7 @@ spec:
       build_command: "npm install && npm run build"
       source_dir: ./frontend
   databases:
-    - name: postgres-db
+    - name: test-mr-do-starter-kit
       engine: PG
       version: "15"
       production: false
