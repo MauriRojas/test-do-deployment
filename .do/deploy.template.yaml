@@ -33,6 +33,23 @@ spec:
         repo_clone_url: https://github.com/MauriRojas/test-do-deployment
       build_command: "npm install && npm run build"
       source_dir: ./frontend
+      envs:
+      - key: "NEXT_PUBLIC_SUPABASE_URL"
+        value: "placeholder"
+      - key: "NEXT_PUBLIC_SUPABASE_ANON_KEY"
+        value: "placeholder"
+      - key: "NEXT_PUBLIC_API_BASE_URL"
+        value: "placeholder"
+      - key: "NEXT_PUBLIC_STRIPE_PUBLIC_KEY"
+        value: "placeholder"
+      - key: "NEXT_PUBLIC_PRICE_ID"
+        value: "placeholder"
+      - key: "NEXT_PUBLIC_PRO_PRICE_ID"
+        value: "placeholder"
+      - key: "STRIPE_SECRET_KEY"
+        value: "placeholder"
+      - key: "SUPABASE_SERVICE_ROLE_KEY"
+        value: "placeholder"
   databases:
     - name: saas-kit-db
       engine: PG
