@@ -35,7 +35,7 @@ spec:
       source_dir: ./frontend
   databases:
     - name: postgres-db
-      engine: pg
+      engine: PG
       version: "15"
       production: false
       cluster_name: test-do-starter-kit-db-cluster
