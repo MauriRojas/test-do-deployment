@@ -31,7 +31,7 @@ spec:
       git:
         branch: main
         repo_clone_url: https://github.com/MauriRojas/test-do-deployment
-      build_command: "npm install && npm run build"
+      build_command: "npm install"
       source_dir: ./frontend
       envs:
       - key: "NEXT_PUBLIC_SUPABASE_URL"
