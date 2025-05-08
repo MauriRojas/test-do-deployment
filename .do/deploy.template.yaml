@@ -40,4 +40,3 @@ spec:
       production: false
       cluster_name: test-do-starter-kit-db-cluster
       db_user: saas-kit-user
-      db_name: saas-kit-db
