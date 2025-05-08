@@ -34,10 +34,10 @@ spec:
       build_command: "npm install && npm run build"
       source_dir: ./frontend
   databases:
-    - name: saas_kit_db
+    - name: saas-kit-db
       engine: PG
       version: "15"
       production: false
       cluster_name: test-do-starter-kit-db-cluster
-      db_user: saas_kit_user
-      db_name: saas_kit_db
+      db_user: saas-kit-user
+      db_name: saas-kit-db
