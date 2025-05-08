@@ -34,7 +34,7 @@ spec:
       build_command: "npm install && npm run build"
       source_dir: ./frontend
   databases:
-    - name: test-mr-do-starter-kit
+    - name: saas_kit_db
       engine: PG
       version: "15"
       production: false
