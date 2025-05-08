@@ -25,6 +25,27 @@ spec:
       instance_count: 1
       instance_size_slug: apps-s-1vcpu-0.5gb
       source_dir: ./backend
+      envs:
+      - key: "SUPABASE_JWT_SECRET"
+        value: ""
+        type: "SECRET"
+      - key: "FRONTEND_URL"
+        value: "${static-site.PUBLIC_URL}"
+      - key: "POSTGRES_HOST"
+        value: "${saas-kit-db.HOSTNAME}"
+        type: "SECRET"
+      - key: "POSTGRES_PORT"
+        value: "${saas-kit-db.PORT}"
+        type: "SECRET"
+      - key: "POSTGRES_DB"
+        value: "${saas-kit-db.DATABASE}"
+        type: "SECRET"
+      - key: "POSTGRES_USER"
+        value: "${saas-kit-db.USERNAME}"
+        type: "SECRET"
+      - key: "POSTGRES_PASSWORD"
+        value: "${saas-kit-db.PASSWORD}"
+        type: "SECRET"
   static_sites:
     - name: static-site
       environment_slug: node-js
@@ -35,21 +56,23 @@ spec:
       source_dir: ./frontend
       envs:
       - key: "NEXT_PUBLIC_SUPABASE_URL"
-        value: "placeholder"
+        value: ""
       - key: "NEXT_PUBLIC_SUPABASE_ANON_KEY"
-        value: "placeholder"
+        value: ""
       - key: "NEXT_PUBLIC_API_BASE_URL"
-        value: "placeholder"
+        value: ""
       - key: "NEXT_PUBLIC_STRIPE_PUBLIC_KEY"
-        value: "placeholder"
+        value: ""
       - key: "NEXT_PUBLIC_PRICE_ID"
-        value: "placeholder"
+        value: ""
       - key: "NEXT_PUBLIC_PRO_PRICE_ID"
-        value: "placeholder"
+        value: ""
       - key: "STRIPE_SECRET_KEY"
-        value: "placeholder"
+        value: ""
+        type: "SECRET"
       - key: "SUPABASE_SERVICE_ROLE_KEY"
-        value: "placeholder"
+        value: ""
+        type: "SECRET"
   databases:
     - name: saas-kit-db
       engine: PG
