@@ -39,4 +39,3 @@ spec:
       version: "15"
       production: false
       cluster_name: test-do-starter-kit-db-cluster
-      db_user: saas-kit-user
